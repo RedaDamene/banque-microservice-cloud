@@ -1,0 +1,21 @@
+spring:
+    application:
+        name: account-service
+    datasource:
+        url: jdbc:h2:mem:account-db
+    h2:
+        console:
+            enabled: true
+    cloud:
+        config:
+            enabled: false
+        discovery:
+            enabled: true
+server:
+    port: 8082
+eureka:
+    instance:
+        prefer-ip-address: true
+    client:
+        service-url:
+            defaultZone: http://localhost:8761/eureka
